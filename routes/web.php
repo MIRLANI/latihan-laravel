@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Latihan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('about');
 });
+
+Route::get("/about", function(){
+    return "lani";
+});
+
+
+Route::view("/latihan", [Latihan::class, "index"]);
+
